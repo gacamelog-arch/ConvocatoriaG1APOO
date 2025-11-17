@@ -1,0 +1,49 @@
+{
+  "info": {
+    "name": "Docente API",
+    "_postman_id": "docente-collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Crear Docente",
+      "request": {
+        "method": "POST",
+        "header": [
+          { "key": "Content-Type", "value": "application/json" }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"numeroDocumento\": \"12345678\",\n  \"tipoDocumento\": 1,\n  \"nombre\": \"Juan\",\n  \"apellido\": \"Perez\",\n  \"email\": \"juan.perez@example.com\",\n  \"telefono\": \"3001234567\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/docente", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["docente"] }
+      }
+    },
+    {
+      "name": "Obtener todos",
+      "request": {
+        "method": "GET",
+        "url": { "raw": "http://localhost:8080/docente", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["docente"] }
+      }
+    },
+    {
+      "name": "Actualizar Docente",
+      "request": {
+        "method": "PUT",
+        "header": [{ "key": "Content-Type", "value": "application/json" }],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"id\": 1,\n  \"numeroDocumento\": \"12345678\",\n  \"tipoDocumento\": 1,\n  \"nombre\": \"Juan Updated\",\n  \"apellido\": \"Perez\",\n  \"email\": \"juan.updated@example.com\",\n  \"telefono\": \"3007654321\"\n}"
+        },
+        "url": { "raw": "http://localhost:8080/docente", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["docente"] }
+      }
+    },
+    {
+      "name": "Eliminar Docente",
+      "request": {
+        "method": "DELETE",
+        "url": { "raw": "http://localhost:8080/docente/1", "protocol": "http", "host": ["localhost"], "port": "8080", "path": ["docente", "1"] }
+      }
+    }
+  ]
+}
